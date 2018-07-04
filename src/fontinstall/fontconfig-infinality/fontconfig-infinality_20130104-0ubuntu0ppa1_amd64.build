@@ -1,0 +1,46 @@
+ dpkg-buildpackage -rfakeroot -us -uc -ui -b
+dpkg-buildpackage: warning: using a gain-root-command while being root
+dpkg-buildpackage: info: source package fontconfig-infinality
+dpkg-buildpackage: info: source version 20130104-0ubuntu0ppa1
+dpkg-buildpackage: info: source distribution quantal
+dpkg-buildpackage: info: source changed by Bob Chez <no1wantdthisname@gmail.com>
+ dpkg-source --before-build fontconfig-infinality-0
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_clean
+ debian/rules build
+dh build
+   dh_update_autotools_config
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_installdeb
+   dh_gencontrol
+dpkg-gencontrol: warning: Depends field of package fontconfig-infinality: unknown substitution variable ${shlibs:Depends}
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'fontconfig-infinality' in '../fontconfig-infinality_20130104-0ubuntu0ppa1_all.deb'.
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../fontconfig-infinality_20130104-0ubuntu0ppa1_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build fontconfig-infinality-0
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian fontconfig-infinality_20130104-0ubuntu0ppa1_amd64.changes ...
+warning: the authors of lintian do not recommend running it with root privileges!
+E: fontconfig-infinality changes: bad-distribution-in-changes-file quantal
+W: fontconfig-infinality: debian-changelog-line-too-long line 3
+W: fontconfig-infinality: description-too-long
+E: fontconfig-infinality: extended-description-is-empty
+W: fontconfig-infinality: executable-not-elf-or-script etc/fonts/infinality/conf.src/generate60/generate60.sh
+Finished running lintian.

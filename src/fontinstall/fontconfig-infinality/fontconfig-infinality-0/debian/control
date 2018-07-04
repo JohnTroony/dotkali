@@ -1,0 +1,13 @@
+Source: fontconfig-infinality
+Section: fonts
+Priority: optional
+Maintainer: Bob Chez <no1wantdthisname@gmail.com>
+Build-Depends: debhelper (>= 9), cdbs (>= 0.4.93)
+Standards-Version: 3.9.3
+
+Package: fontconfig-infinality
+Section: fonts
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: foreign
+Description: Packages up http://www.infinality.net/fedora/linux/zips/fontconfig-infinality-1-20130104_1.tar.bz2

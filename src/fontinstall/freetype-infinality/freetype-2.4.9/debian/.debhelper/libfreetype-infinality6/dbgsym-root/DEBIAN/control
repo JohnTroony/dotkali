@@ -1,0 +1,13 @@
+Package: libfreetype-infinality6-dbgsym
+Source: freetype-infinality
+Version: 2.4.9-3
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
+Installed-Size: 959
+Depends: libfreetype-infinality6 (= 2.4.9-3)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libfreetype-infinality6
+Build-Ids: b73e2528e7b8f51936376afa5fb81e54b8da27db

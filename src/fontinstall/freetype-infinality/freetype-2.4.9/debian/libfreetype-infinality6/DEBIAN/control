@@ -1,0 +1,15 @@
+Package: libfreetype-infinality6
+Source: freetype-infinality
+Version: 2.4.9-3
+Architecture: amd64
+Maintainer: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
+Installed-Size: 777
+Depends: libc6 (>= 2.14), zlib1g (>= 1:1.1.4)
+Section: libs
+Priority: optional
+Multi-Arch: same
+Homepage: http://www.infinality.net
+Description: FreeType 2 font engine, with the Infinality patch set, shared library files
+ The purpose of these patches is to provide the nicest font rendering of any
+ operating system. The second goal is to provide customization so that the
+ end user is able to adjust the settings to his or her taste.

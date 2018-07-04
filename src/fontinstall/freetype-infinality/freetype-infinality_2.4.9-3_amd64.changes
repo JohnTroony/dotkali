@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Sat, 03 Aug 2013 03:47:28 -0400
+Source: freetype-infinality
+Binary: freetype-infinality libfreetype-infinality6
+Architecture: all amd64
+Version: 2.4.9-3
+Distribution: unstable
+Urgency: low
+Maintainer: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
+Changed-By: Xiao-Long Chen <chenxiaolong@cxl.epac.to>
+Description:
+ freetype-infinality - FreeType 2 font engine, with the Infinality patch set
+ libfreetype-infinality6 - FreeType 2 font engine, with the Infinality patch set, shared lib
+Changes:
+ freetype-infinality (2.4.9-3) unstable; urgency=low
+ .
+   * Allow profile.d script to be parsed by sh (fix #2) (GH: #1)
+Checksums-Sha1:
+ 44be5a812869e90b135323c8542bab2c2d80dccf 52364 freetype-infinality_2.4.9-3_all.deb
+ 866b01eaea20dafdd0df61c37b4ae7ac0acec470 6469 freetype-infinality_2.4.9-3_amd64.buildinfo
+ 7c68946679e5a3a49de9a7bc67ed08bf7fe14056 909124 libfreetype-infinality6-dbgsym_2.4.9-3_amd64.deb
+ a6e07c07e95d40257354084fc32182cdce3cae58 339980 libfreetype-infinality6_2.4.9-3_amd64.deb
+Checksums-Sha256:
+ 92e8dbb946e67a20d7aa6242cf3dc5c90df0fa6d1132215f162d47a24ce56783 52364 freetype-infinality_2.4.9-3_all.deb
+ e68733b5dd2ea45fd57da72c765f51a0ee525582f4a214c99f6b0a976995b534 6469 freetype-infinality_2.4.9-3_amd64.buildinfo
+ 6f66074328283734ffdfdd7fe9c877545ab54cbb41d1c0f60155ee9283e1fa8f 909124 libfreetype-infinality6-dbgsym_2.4.9-3_amd64.deb
+ ba47ab26151e5419ec7420b0c4669103fdbd8bbcba9675ea67402b75bb4e454e 339980 libfreetype-infinality6_2.4.9-3_amd64.deb
+Files:
+ b0f240c1e151e3c7f8b151f6ddfcc95c 52364 misc optional freetype-infinality_2.4.9-3_all.deb
+ 62c6939edc74e9fb0d7712dcb83bd365 6469 libs optional freetype-infinality_2.4.9-3_amd64.buildinfo
+ 76652eee3cbe76882b319e01fd376171 909124 debug optional libfreetype-infinality6-dbgsym_2.4.9-3_amd64.deb
+ ec3aa5dd3993080e35112c1c833f437a 339980 libs optional libfreetype-infinality6_2.4.9-3_amd64.deb

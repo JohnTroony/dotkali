@@ -1,0 +1,25 @@
+Format: 1.8
+Date: Sat, 05 Jan 2013 02:01:11 -0500
+Source: fontconfig-infinality
+Binary: fontconfig-infinality
+Architecture: all
+Version: 20130104-0ubuntu0ppa1
+Distribution: quantal
+Urgency: low
+Maintainer: Bob Chez <no1wantdthisname@gmail.com>
+Changed-By: Bob Chez <no1wantdthisname@gmail.com>
+Description:
+ fontconfig-infinality - Packages up http://www.infinality.net/fedora/linux/zips/fontconfi
+Changes:
+ fontconfig-infinality (20130104-0ubuntu0ppa1) quantal; urgency=low
+ .
+   * Just packages http://www.infinality.net/fedora/linux/zips/fontconfig-infinality-1-20130104_1.tar.bz2
+Checksums-Sha1:
+ c23559dec29495d7183ee7d49ea36129080edc7d 32552 fontconfig-infinality_20130104-0ubuntu0ppa1_all.deb
+ ec38a5b838c0a36bfa1af765529bed879d4fa32c 5224 fontconfig-infinality_20130104-0ubuntu0ppa1_amd64.buildinfo
+Checksums-Sha256:
+ d31f99a0d1a4bab8d212cc821b5b2d5590949aa5937a402bb70a451778074895 32552 fontconfig-infinality_20130104-0ubuntu0ppa1_all.deb
+ 9329748ed0619c155cba778592e60df844a8d39c78d3cb1134a3b3cde55b8294 5224 fontconfig-infinality_20130104-0ubuntu0ppa1_amd64.buildinfo
+Files:
+ eb8180ab77584d53adc5d3cd16c8187c 32552 fonts optional fontconfig-infinality_20130104-0ubuntu0ppa1_all.deb
+ b97faecdabf91a33bfc8d49283baf273 5224 fonts optional fontconfig-infinality_20130104-0ubuntu0ppa1_amd64.buildinfo
