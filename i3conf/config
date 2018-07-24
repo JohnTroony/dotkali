@@ -38,10 +38,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+v split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+h split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -65,11 +65,11 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces
 set $ws1 "1: "
-set $ws2 "2: "
-set $ws3 "3: "
+set $ws2 "2: "
+set $ws3 "3: "
 set $ws4 "4: "
 set $ws5 "5: "
-set $ws6 "6: "
+set $ws6 "6: "
 set $ws7 "7: "
 set $ws8 "8: "
 set $ws9 "9: "
@@ -102,17 +102,26 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # App allowed to float
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Skype"] floating enable
-
+for_window [class="Kazam"] floating enable
+for_window [class="Gtk-recordmydesktop"] floating enable
+for_window [class="Gthumb"] floating enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="Dia"] floating enable
 
 # Assign default workspaces for some apps
 assign [class="Terminator"] $ws1
 assign [class="Firefox-esr"] $ws2
-assign [class="Nautilus"] $ws3
+assign [class="ghostwriter"] $ws3
 assign [class="Sublime_text"] $ws4
+assign [class="Evince"] $ws7
 assign [class="IDA"] $ws5
 assign [class="com-install4j-runtime-launcher-UnixLauncher"] $ws6
+assign [class="VirtualBox Manager"] $ws6
+assign [class="VirtualBox Machine"] $ws6
 assign [class="libreoffice-writer"] $ws7
-assign [class="mpv"] $ws8
+assign [class="libreoffice-impress"] $ws7
+assign [class="Kodi"] $ws8
+assign [class="Vlc"] $ws8
 assign [class="Hexchat"] $ws9
 assign [class="Skype"] $ws10
 
@@ -181,17 +190,20 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 
 # Startup applications
 exec compton -f
-exec nm-applet 
+exec nm-applet
+exec blueman-applet
+exec terminator
+exec nautilus
+exec skypeforlinux
 
 # Set Desktop Background/Wallpaper
-exec_always feh --bg-scale $baseDir/wallpapers/629544.jpg
+exec_always feh --bg-scale $baseDir/wallpapers/lulz.jpg
 
 # Extra Keybindings
 bindsym $mod+r mode "resize"
 bindsym $mod+Shift+x  exec lock
+bindsym $mod+Shift+n  exec nautilus
+bindsym $mod+Shift+b  exec chromium --no-sandbox
 hide_edge_borders both
 bindsym $mod+Shift+p exec gnome-screenshot
 bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 60 -padding 80 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "$bg_color" -font "System San Francisco Display 13"
-
-
-
