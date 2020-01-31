@@ -66,7 +66,7 @@ bindsym $mod+a focus parent
 # Define names for default workspaces
 set $ws1 "1: "
 set $ws2 "2: "
-set $ws3 "3: "
+set $ws3 "3: "
 set $ws4 "4: "
 set $ws5 "5: "
 set $ws6 "6: "
@@ -107,6 +107,10 @@ for_window [class="Gtk-recordmydesktop"] floating enable
 for_window [class="Gthumb"] floating enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="Dia"] floating enable
+for_window [class="com-install4j-runtime-launcher-UnixLauncher"] floating enable
+for_window [class="Gnote"] floating enable
+#for_window [class="VirtualBox Manager"] floating enable
+
 
 # Assign default workspaces for some apps
 assign [class="Terminator"] $ws1
@@ -115,9 +119,10 @@ assign [class="ghostwriter"] $ws3
 assign [class="Sublime_text"] $ws4
 assign [class="Evince"] $ws7
 assign [class="IDA"] $ws5
-assign [class="com-install4j-runtime-launcher-UnixLauncher"] $ws6
+assign [class="Codeblocks"] $ws5
+#assign [class="com-install4j-runtime-launcher-UnixLauncher"] $ws6
 assign [class="VirtualBox Manager"] $ws6
-assign [class="VirtualBox Machine"] $ws6
+assign [class="Vmplayer"] $ws6
 assign [class="libreoffice-writer"] $ws7
 assign [class="libreoffice-impress"] $ws7
 assign [class="Kodi"] $ws8
@@ -147,7 +152,7 @@ mode "resize" {
 }
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+g reload
 
 # restart i3 inplace
 bindsym $mod+Shift+r restart
@@ -157,7 +162,7 @@ bindsym $mod+Shift+e exec $baseDir/scripts/exit_menu
 
 
 # Colors Schemes
-set $bg-color 	         #2f343f
+set $bg-color            #2f343f
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -169,7 +174,7 @@ bar {
         status_command i3blocks -c $baseDir/i3blocks.conf
 	colors {
 		background $bg-color
-	    	separator #757575
+	        separator #757575
 		#                  border             background         text
 		focused_workspace  $bg-color          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
@@ -188,22 +193,38 @@ client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-co
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 
-# Startup applications
-exec compton -f
-exec nm-applet
-exec blueman-applet
-exec terminator
-exec nautilus
-exec skypeforlinux
-
-# Set Desktop Background/Wallpaper
-exec_always feh --bg-scale $baseDir/wallpapers/lulz.jpg
+# Backlight brightness
+bindsym $mod+Shift+x  exec $baseDir/scripts/lock
 
 # Extra Keybindings
 bindsym $mod+r mode "resize"
-bindsym $mod+Shift+x  exec lock
+bindsym $mod+Shift+f  exec /root/.firefoxhacker/firefox
 bindsym $mod+Shift+n  exec nautilus
-bindsym $mod+Shift+b  exec chromium --no-sandbox
+bindsym $mod+Shift+c  exec chromium --no-sandbox
+bindsym $mod+Shift+b  exec /root/WEBSEC/Bap/runBap.sh
+bindsym $mod+Shift+m  exec flameshot gui
+bindsym $mod+Shift+h  exec /opt/hopper-v4/bin/Hopper
 hide_edge_borders both
-bindsym $mod+Shift+p exec gnome-screenshot
-bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 60 -padding 80 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "$bg_color" -font "System San Francisco Display 13"
+bindsym $mod+Shift+p exec ghost-writer --no-sandbox
+bindsym $mod+d exec rofi -show run -config /root/.config/rofi
+
+
+# Startup applications
+#exec --no-startup-id compton -f
+#exec --no-startup-id nm-applet
+#exec --no-startup-id blueman-applet
+#exec --no-startup-id terminator
+#exec --no-startup-id nautilus
+# Set Desktop Background/Wallpaper
+#exec_always feh --bg-scale 
+
+
+exec_always --no-startup-id feh --bg-fill $baseDir/wallpapers/kaneki.jpg
+exec --no-startup-id compton -b
+
+exec --no-startup-id nm-applet &
+exec --no-startup-id blueman-applet &
+exec --no-startup-id redshift-gtk &
+
+exec --no-startup-id dunst &
+exec --no-startup-id xedgewarp -b
