@@ -72,4 +72,18 @@ cp -r GTKconfs/gtk-3.0/ $baseDir
 cp GTKconfs/gtk-2.0 /root/.gtk-2.0
 
 
+# More Post Installs
+sed -i 's/geteuid/getppid/' /usr/bin/vlc
+apt-get install network-manager
+apt-get install network-manager-gnome
+apt install network-manager-openvpn
+apt install network-manager-vpnc
+apt install network-manager-openconnect
+apt install bluetooth
+apt install blueman
+apt install wxhexeditor
+apt-get install apt-transport-https
+code --user-data-dir="~/.vscode-root"
+
+
 reboot
