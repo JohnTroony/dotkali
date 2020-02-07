@@ -15,9 +15,9 @@ apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt autoremov
 apt-get install build-essential clang gcc git gdb autotools-dev automake libtool texinfo
 apt-get install conky tmux vim openvpn dia gthumb pulseaudio alsa-utils windows-binaries 
 apt-get install linux-image-$(uname -r|sed 's,[^-]*-[^-]*-,,') linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,')
-apt-get install dkms virtualbox-dkms
-apt-get install virtualbox
-
+apt-get install dkms virtualbox-dkms -y
+apt-get install virtualbox -y
+apt install virtualbox-guest-x11 -y
 
 # Install i3wm and related files
 apt-get install i3 -y 
